@@ -1,0 +1,2 @@
+(window.webpackJsonpclient=window.webpackJsonpclient||[]).push([[21],{77:function(n,t,e){"use strict";e.r(t),e.d(t,"addData",(function(){return a})),e.d(t,"readData",(function(){return u}));var r=e(8),a=function(n){return{type:r.ADD_DATA_REQUEST,payload:n}},u=function(){return{type:r.READ_DATA_REQUEST}}}}]);
+//# sourceMappingURL=21.97c9be2f.chunk.js.map
