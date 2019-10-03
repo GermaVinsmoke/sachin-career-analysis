@@ -11,7 +11,7 @@ const Container = styled.div`
   }
 `;
 
-const BarChart = ({ labelData, datasetData, label }) => {
+const BarChart = ({ labelData, datasetData }) => {
   const data = canvas => {
     const ctx = canvas.getContext('2d');
     const gradient = ctx.createLinearGradient(63, 81, 181, 700);

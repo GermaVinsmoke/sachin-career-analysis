@@ -1,7 +1,6 @@
 import React, { Component, Suspense } from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Loading from './components/Loading';
-import history from './history';
 
 import lazyImport from './lazyImport';
 const Home = lazyImport('./home/index.js');
@@ -12,7 +11,7 @@ const Feedback = lazyImport('./feedback/index.js');
 class App extends Component {
   render() {
     return (
-      <Router history={history}>
+      <Router>
         <Suspense fallback={<Loading />}>
           <Switch>
             <Route exact path="/">

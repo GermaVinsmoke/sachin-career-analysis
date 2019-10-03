@@ -1,22 +1,24 @@
-.left{
-    left: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.2)), url('../assets/sachin_left.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-right: 2px solid;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: flex-end;
+.left {
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url('https://drive.google.com/uc?export=view&id=1xppqCcK2Y-nJ5XhW3xTtDylknM2bqY7a');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-right: 2px solid;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-.right{
-    right: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.2)), url('../assets/sachin_right.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-left: 2px solid;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+.right {
+  right: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url('https://drive.google.com/uc?export=view&id=1KxvFWgbcM3hrCERjDm5yiwLlKCqDjgXY');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-left: 2px solid;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }

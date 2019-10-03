@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchInfo } from './actions';
 import styled from 'styled-components';
-import bgImg from '../assets/sachin.jpg';
+// import bgImg from '../assets/sachin.jpg';
 import NextButton from '../components/NextButton';
 
 const Container = styled.div`
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${bgImg});
+    url('https://drive.google.com/uc?export=view&id=1XLYiuR-T7_v9GzN9mcbVfR7WEVXtv5m2');
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,1 +1,0 @@
-{"version":3,"sources":["home/actions.js"],"names":["fetchInfo","type","FETCH_INFO"],"mappings":"sGAAA,6DAIaA,EAAY,iBAAO,CAC5BC,KAAMC","file":"static/js/22.8492b382.chunk.js","sourcesContent":["import {\r\n    FETCH_INFO\r\n} from './types';\r\n\r\nexport const fetchInfo = () => ({\r\n    type: FETCH_INFO\r\n})"],"sourceRoot":""}
