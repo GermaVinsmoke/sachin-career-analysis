@@ -3,10 +3,12 @@ const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const path = require('path')
 const firebase = require('firebase')
-const firestore = require('firebase/firestore')
 const dataForge = require('data-forge');
 require('data-forge-fs');
-require('dotenv').config();
+
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
 
 const port = process.env.PORT || 5000;
 
