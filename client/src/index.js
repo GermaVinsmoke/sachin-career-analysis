@@ -4,7 +4,6 @@ import App from './App';
 import createSagaMiddleware from 'redux-saga';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-// import { logger } from 'redux-logger';
 import reducer from './rootReducer';
 import rootSaga from './rootSaga';
 import './index.css';

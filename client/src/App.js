@@ -7,6 +7,7 @@ const Home = lazyImport('./home/index.js');
 const HistoryPage = lazyImport('./historyPage/index.js');
 const Stats = lazyImport('./stats/index.js');
 const Feedback = lazyImport('./feedback/index.js');
+const ErrorComp = lazyImport('./Error.jsx');
 
 class App extends Component {
   render() {
@@ -17,14 +18,17 @@ class App extends Component {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/history">
+            <Route path="/history">
               <HistoryPage />
             </Route>
-            <Route exact path="/stats">
+            <Route path="/stats">
               <Stats />
             </Route>
-            <Route exact path="/feedback">
+            <Route path="/feedback">
               <Feedback />
+            </Route>
+            <Route>
+              <ErrorComp />
             </Route>
           </Switch>
         </Suspense>

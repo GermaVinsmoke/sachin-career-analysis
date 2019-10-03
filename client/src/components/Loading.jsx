@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import sprite from '../assets/flame_sprite.png';
 
 const animate = keyframes`
     from {
@@ -17,7 +16,7 @@ const SpriteAnimation = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url(${sprite});
+  background: url('/api/images/flame_sprite.webp');
   width: calc(3072px / 6);
   height: 512px;
   animation: ${animate} 0.5s steps(6) infinite;

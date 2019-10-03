@@ -1,6 +1,6 @@
 export const FETCH_RUNS = 'FETCH_RUNS';
 export const RUNS_RECEIVED = 'RUNS_RECEIVED';
-export const RUNS_ERROR = 'RUNS_ERROR'
+export const RUNS_ERROR = 'RUNS_ERROR';
 
 export const FETCH_MATCH_RUNS = 'FETCH_MATCH_RUNS';
 export const MATCH_RUNS_RECEIVED = 'MATCH_RUNS_RECEIVED';
@@ -13,3 +13,7 @@ export const TIME_DATA_ERROR = 'TIME_DATA_ERROR';
 export const FETCH_BAR_DATA = 'FETCH_BAR_DATA';
 export const BAR_DATA_RECEIVED = 'BAR_DATA_RECEIVED';
 export const BAR_DATA_ERROR = 'BAR_DATA_ERROR';
+
+export const FETCH_BATSMEN = 'FETCH_BATSMEN';
+export const BATSMEN_RECEIVED = 'BATSMEN_RECEIVED';
+export const BATSMEN_FAILED = 'BATSMEN_FAILED';

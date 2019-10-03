@@ -7,25 +7,25 @@ import {
   READ_DATA_FAILED,
   READ_DATA_SUCCESS
 } from './types';
-import { fs } from '../config';
 
 function addData(payload) {
-  return fs
-    .collection('feedback')
-    .add({
-      response: payload
-    })
-    .then(docRef => docRef.id)
+  let res = { response: payload };
+  return fetch('/api/feedback/response/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(res)
+  })
+    .then(response => response.json())
+    .then(json => json)
     .catch(error => {
       throw error;
     });
 }
 
 async function readData() {
-  return fs
-    .collection('feedback')
-    .get()
-    .then(snapshot => snapshot.docs.map(doc => doc.data()))
+  return fetch('/api/feedback')
+    .then(response => response.json())
+    .then(json => json)
     .catch(error => {
       throw error;
     });
@@ -35,7 +35,7 @@ function* addDataRequest(action) {
   try {
     const { payload } = action;
     const response = yield call(addData, payload);
-    yield put({ type: ADD_DATA_SUCCESS, response });
+    yield put({ type: ADD_DATA_SUCCESS, response: response.data });
     yield;
   } catch (error) {
     yield put({ type: ADD_DATA_FAILED, error });
@@ -45,7 +45,7 @@ function* addDataRequest(action) {
 function* readDataRequest() {
   try {
     const response = yield call(readData);
-    yield put({ type: READ_DATA_SUCCESS, response });
+    yield put({ type: READ_DATA_SUCCESS, response: response.result });
   } catch (error) {
     yield put({ type: READ_DATA_FAILED, error });
   }

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import data from './batsmen.json';
 
 const Container = styled.div`
   display: flex;
@@ -41,7 +40,7 @@ const TableHeading = styled.th`
   height: 45px;
 `;
 
-const RunComparison = () => {
+const RunComparison = ({ data }) => {
   return (
     <Container>
       <Heading>Some of the greatest Batsmen of all time</Heading>

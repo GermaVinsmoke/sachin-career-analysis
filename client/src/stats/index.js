@@ -4,7 +4,8 @@ import {
   fetchRuns,
   fetchMatchRuns,
   fetchTimeData,
-  fetchBarData
+  fetchBarData,
+  fetchBatsmen
 } from './actions';
 import RunSection from './RunSection';
 import MixSection from './MixSection';
@@ -32,6 +33,7 @@ class Stats extends Component {
     this.props.fetchMatchRuns('opposition');
     this.props.fetchTimeData('batting_score', 'Runs');
     this.props.fetchBarData('toss');
+    this.props.fetchBatsmen();
   }
 
   handleYearChange = year => {
@@ -59,7 +61,7 @@ class Stats extends Component {
           <Header text="Batting Statistics" />
           <SubHeading> Runs Scored </SubHeading>
           <RunSection runsData={stats.runs} change={this.handleYearChange} />
-          <RunComparison />
+          <RunComparison data={stats.batsmen} />
           <SubHeading> Runs & Matches </SubHeading>
           <MixSection
             runsMatchData={stats.runs_match}
@@ -95,6 +97,7 @@ export default connect(
     fetchRuns,
     fetchMatchRuns,
     fetchTimeData,
-    fetchBarData
+    fetchBarData,
+    fetchBatsmen
   }
 )(Stats);
