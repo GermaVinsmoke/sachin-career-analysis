@@ -81,7 +81,7 @@ class Stats extends Component {
         </Container>
 
         <PrevButton nav_to="/history" top_to="20rem" left_to="5%" />
-        <NextButton nav_to="/feedback" top_to="20rem" left_to="90%" />
+        {/* <NextButton nav_to="/feedback" top_to="20rem" left_to="90%" /> */}
       </>
     );
   }
